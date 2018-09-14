@@ -1,0 +1,9 @@
+language: node_js
+sudo: enabled
+node_js:
+  - "iojs"
+  - "8.11.4"
+before_install:
+  echo $APP_ENV
+install:
+before_script:

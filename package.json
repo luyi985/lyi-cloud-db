@@ -1,0 +1,20 @@
+{
+  "name": "lyi-cloud-db",
+  "version": "1.0.0",
+  "description": "## RESOURCE - https://www.apollographql.com/docs/apollo-server/servers/lambda.html - https://serverless.com/blog/serverless-express-rest-api/ - https://serverless.com/blog/make-serverless-graphql-api-using-lambda-dynamodb/ - https://docs.travis-ci.com/user/languages/javascript-with-nodejs/ - https://www.apollographql.com/docs/apollo-server/servers/lambda.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luyi985/lyi-cloud-db.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luyi985/lyi-cloud-db/issues"
+  },
+  "homepage": "https://github.com/luyi985/lyi-cloud-db#readme"
+}
