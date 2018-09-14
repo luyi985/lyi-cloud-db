@@ -1,4 +1,4 @@
-# lyi-could-db
+# lyi-cloud-db
 
 ## RESOURCE
 - https://www.apollographql.com/docs/apollo-server/servers/lambda.html
