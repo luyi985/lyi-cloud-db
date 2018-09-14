@@ -4,7 +4,7 @@
   "description": "## RESOURCE - https://www.apollographql.com/docs/apollo-server/servers/lambda.html - https://serverless.com/blog/serverless-express-rest-api/ - https://serverless.com/blog/make-serverless-graphql-api-using-lambda-dynamodb/ - https://docs.travis-ci.com/user/languages/javascript-with-nodejs/ - https://www.apollographql.com/docs/apollo-server/servers/lambda.html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"test demo\" && exit 0"
   },
   "repository": {
     "type": "git",
