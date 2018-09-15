@@ -1,5 +1,9 @@
 language: node_js
 sudo: enabled
+branches:
+  only:
+  - master
+  - /^(feature|fix)-.*$/
 node_js:
   - "8.11.4"
 before_install:
