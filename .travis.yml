@@ -7,7 +7,14 @@ branches:
 node_js:
   - "8.11.4"
 before_install:
+  - npm install -g serverless && serverless --version
+  - serverless config credentials -p aws -k ${aws_access_key_id} -s ${aws_secret_access_key}
 install:
 before_script:
 script:
-  echo $APP_ENV
+  - echo "----LS current folder-----" && ls -la
+  - echo "----Print current path----" && pwd
+  - serverless package
+  - serverless deploy
+  - serverless info
+  
