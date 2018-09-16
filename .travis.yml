@@ -7,7 +7,10 @@ branches:
 node_js:
   - "8.11.4"
 before_install:
+  npm install -g serverless
 install:
 before_script:
 script:
   echo $APP_ENV
+  echo "----LS current folder-----" && ls -la
+  echo "----Print current path----" && pwd
