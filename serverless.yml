@@ -28,5 +28,6 @@ functions:
     reservedConcurrency: 5 # optional, reserved concurrency limit for this function. By default, AWS uses account concurrency limit
     events: # All events associated with this function
       - http:
-          path: test/hello
+          path: test-hello
           method: get
+          
