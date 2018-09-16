@@ -15,3 +15,6 @@ script:
   - echo "----LS current folder-----" && ls -la
   - echo "----Print current path----" && pwd
   - serverless info
+deploy:
+  - serverless package
+  - serverless deploy
