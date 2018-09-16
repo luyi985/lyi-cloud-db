@@ -2,7 +2,7 @@ service: lyi-cloud-db
 provider:
   name: aws
   runtime: nodejs8.10
-  region: us-west-2
+  region: ap-south-2
   memorySize: 512 # optional, in MB, default is 1024
   timeout: 10 # optional, in seconds, default is 6
   versionFunctions: false # optional, default is true
