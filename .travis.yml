@@ -14,7 +14,7 @@ before_script:
 script:
   - echo "----LS current folder-----" && ls -la
   - echo "----Print current path----" && pwd
-  - serverless package
+  - serverless package -r ap-south-2
   - serverless deploy
   - serverless info
   
