@@ -2,8 +2,9 @@ language: node_js
 sudo: enabled
 notifications:
   email: false
-  #slack: ${slack_acc}:${slack_token}
-  slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
+  slack: ${slack_acc}:${slack_token}
+  #slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
+  s
 branches:
   only:
   - master
@@ -16,8 +17,8 @@ before_install:
 install:
 before_script:
 script:
-  - echo "----LS current folder-----" && ls -la
-  - echo "----Print current path----" && pwd
+  - echo "slack_acc: ${slack_acc}"
+  - echo "slack_acc: ${slack_token}"
   - serverless package
   - serverless deploy
   - serverless info
