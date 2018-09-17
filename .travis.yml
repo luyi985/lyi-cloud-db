@@ -2,8 +2,8 @@ language: node_js
 sudo: enabled
 notifications:
   email: false
-  slack: "${slack_acc}:${slack_token}"
-  #slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
+  slack
+    - secure: Zaqd7NXtAp4peQiCXud9o+dvhAX2Vn30TP8+6Mp5KnuoxQrF17s3WyxKX/qI1zDlhoNihZgMixyZQur1wIT9yb5SVy2ID3yS08jRB7U+QU57EKNJAnWCuSCU2qv4z0VHibfAlu5gydvI0emA0HmRxPdOAnMzVygRUzex6krKg3AC3R3R6NzOEN90XpW0s+AJ/9xqyqX5nALrAL7n9h5cCFJh37udpMz3Nr8Z442gspddVzjl1yXMC9a/cMpad8j2x7O03tOy36vHW9u7gaHAogBkliFifsqeiULHEkZXiI9et32C+KzTHSFJ8TxB3yeHIfaLzXWPKM2TP9zHBw9E2OSICkVG/VemxuoiIyYcrcZQX3RVCc0FHkB5qAt9jLp2LCV0W/Z+TFDE52KhxNEK0brSZFVIQtsLOP0qAPU/0Ji/WWZx092Y1uO3h7Bim0dwBgW0d2XSoLPmN7Xf6mykXADVLIfOI9g5Z518fVDMyEljU+gCMt1fSSNttan2E1m2fnvByTu7bI/EW8s42Ds+qd+3JFfQhFst7gDYt/KVKZNtn5wcPd852C2zsUgN5kwOBHnuZLNk3ClSgZGJZ5qVjwCoPCLHRHZmVpzqW5Mzl68iVea5AB0EXu/Dd8mhUfsQSD5AcrBHWGV0glKRWjkSOig6HJw/KZzbBof7d4CC3P4=
 
 branches:
   only:
