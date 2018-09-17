@@ -2,17 +2,21 @@ language: node_js
 sudo: enabled
 notifications:
   email: false
-  slack: ${slack_acc}:${slack_token}
-  #slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
+  #slack: ${slack_acc}:${slack_token}
+  slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
+
 branches:
   only:
   - master
   - /^(feature|fix)-.*$/
+
 node_js:
   - "8.11.4"
+
 before_install:
   - npm install -g serverless && serverless --version
   - serverless config credentials -p aws -k ${aws_access_key_id} -s ${aws_secret_access_key}
+
 install:
 before_script:
 script:
