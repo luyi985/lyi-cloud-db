@@ -4,6 +4,8 @@ notifications:
   email: false
   #slack: ${slack_acc}:${slack_token}
   slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
+    template:
+      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{${current_branch}} in PR <%{pull_request_url}|#%{pull_request_number}> by %{author} %{result} in %{duration}"
 branches:
   only:
   - master
@@ -15,10 +17,9 @@ before_install:
   - serverless config credentials -p aws -k ${aws_access_key_id} -s ${aws_secret_access_key}
 install:
 before_script:
+  - export current_branch=$(git branch | head -1)
 script:
-  - echo "----LS current folder-----" && ls -la
-  - echo "----Print current path----" && pwd
-  - serverless package
+  - serverless package 
   - serverless deploy
   - serverless info
   
