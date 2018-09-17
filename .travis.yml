@@ -13,15 +13,14 @@ install:
 before_script:
    - export current_branch=$(git name-rev --name-only HEAD)
    - echo $current_branch
+script:
+  - npm test || exit 1
+  - serverless package || exit 1
+  - serverless deploy || exit 1
+  - serverless info || exit 1
 notifications:
   email: false
   #slack: ${slack_acc}:${slack_token}
   slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
     template:
       - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{${current_branch}} in PR <%{pull_request_url}|#%{pull_request_number}> by %{author} %{result} in %{duration}"
-script:
-  - npm test || exit 1
-  - serverless package || exit 1
-  - serverless deploy || exit 1
-  - serverless info || exit 1
-  
