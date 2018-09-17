@@ -4,12 +4,12 @@ notifications:
   email: false
   #slack: ${slack_acc}:${slack_token}
   slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
-    on_success: always # default: always
-    on_failure: always # default: always
-    on_start: always   # default: never
-    on_cancel: always # default: always
-    on_error: always # default: always
-    on_pull_requests: always
+  on_success: always # default: always
+  on_failure: always # default: always
+  on_start: always   # default: never
+  on_cancel: always # default: always
+  on_error: always # default: always
+  on_pull_requests: always
 branches:
   only:
   - master
