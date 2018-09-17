@@ -1,5 +1,7 @@
 language: node_js
 sudo: enabled
+notifications:
+  slack: ${slack_notification}
 branches:
   only:
   - master
