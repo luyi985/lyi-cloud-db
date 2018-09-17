@@ -2,9 +2,7 @@ language: node_js
 sudo: enabled
 notifications:
   email: false
-  slack:
-    rooms:
-      - ${slack_acc}:${slack_token}#app_notification
+  slack: ${slack_acc}:${slack_token}
     on_success: always
     on_failure: always
     use_notice: true
