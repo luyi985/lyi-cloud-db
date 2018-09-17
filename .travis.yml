@@ -20,8 +20,8 @@ before_install:
 install:
 before_script:
 script:
-  - echo "slack_acc: ${slack_acc}"
-  - echo "slack_acc: ${slack_token}"
+  - echo $slack_acc
+  - echo $slack_token
   - serverless package
   - serverless deploy
   - serverless info
