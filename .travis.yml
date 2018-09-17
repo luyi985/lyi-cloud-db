@@ -1,7 +1,10 @@
 language: node_js
 sudo: enabled
 notifications:
+  email: false
   slack: ${slack_notification}
+  on_success: always
+  on_failure: always
 branches:
   only:
   - master
