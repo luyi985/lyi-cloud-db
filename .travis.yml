@@ -18,8 +18,7 @@ before_install:
 install:
 before_script:
 script:
-  - echo "----LS current folder-----" && ls -la
-  - echo "----Print current path----" && pwd
+  - npm test
   - serverless package
   - serverless deploy
   - serverless info
