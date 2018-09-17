@@ -1,19 +1,16 @@
 language: node_js
 sudo: enabled
-notifications:
-  email: false
-  #slack: ${slack_acc}:${slack_token}
-  slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
-  on_success: always # default: always
-  on_failure: always # default: always
-  on_start: always   # default: never
-  on_cancel: always # default: always
-  on_error: always # default: always
-  on_pull_requests: always
 branches:
   only:
   - master
   - /^(feature|fix)-.*$/
+notifications:
+  email: false
+  #slack: ${slack_acc}:${slack_token}
+  slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
+  on_success: always
+  on_failure: always
+  on_pull_requests: change
 node_js:
   - "8.11.4"
 before_install:
