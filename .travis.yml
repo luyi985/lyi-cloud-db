@@ -1,5 +1,11 @@
 language: node_js
 sudo: enabled
+notifications:
+  email: false
+  slack: ${slack_acc}:${slack_token}
+    on_success: always
+    on_failure: always
+    use_notice: true
 branches:
   only:
   - master

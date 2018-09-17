@@ -17,7 +17,6 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:ap-south-2:*:*"
-
 functions:
   hello:
     handler: handler.hello # required, handler set in AWS Lambda
