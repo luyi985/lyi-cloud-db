@@ -4,7 +4,6 @@ notifications:
   email: false
   slack: ${slack_acc}:${slack_token}
   #slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
-  s
 branches:
   only:
   - master
