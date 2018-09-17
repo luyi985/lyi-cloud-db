@@ -2,7 +2,8 @@ language: node_js
 sudo: enabled
 notifications:
   email: false
-  slack: ${slack_acc}:${slack_token}
+  #slack: ${slack_acc}:${slack_token}
+  slack: bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
   on_success: always
   on_failure: always
   use_notice: true
