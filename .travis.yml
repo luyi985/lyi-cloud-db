@@ -20,9 +20,10 @@ before_install:
 install:
 before_script:
 script:
-  - echo $slack_acc
-  - echo $slack_token
-  - serverless package
-  - serverless deploy
-  - serverless info
+  - echo $slack_acc || exit 1
+  - echo $slack_token || exit 1
+  - npm test || exit 1
+  - serverless package || exit 1
+  - serverless deploy || exit 1
+  - serverless info || exit 1
   
