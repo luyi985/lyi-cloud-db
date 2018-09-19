@@ -7,3 +7,4 @@
 - https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 - https://www.apollographql.com/docs/apollo-server/servers/lambda.html
 - https://serverless.com/blog/running-scalable-reliable-graphql-endpoint-with-serverless/
+- https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html
