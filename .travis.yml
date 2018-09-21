@@ -11,7 +11,7 @@ notifications:
 branches:
   only:
   - master
-  - /^(feature|fix)-.*$/
+  - /^(feature|fix)(\/|-)[A-Za-z0-9-.]+$/
 
 node_js:
   - "8.11.4"
