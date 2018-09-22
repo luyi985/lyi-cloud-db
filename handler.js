@@ -1,4 +1,4 @@
-module.exports.hello = (event, context, callback) => {
+module.exports.graphqlHandler = (event, context, callback) => {
     const response = {
         statusCode: 200,
         body: JSON.stringify({
