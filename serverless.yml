@@ -25,5 +25,5 @@ functions:
     events:
     - http:
         path: "graphql"
-        method: post
+        method: any
         cors: true
