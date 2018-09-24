@@ -18,12 +18,12 @@ provider:
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:ap-south-2:*:*"
 functions:
-  hello:
-    handler: handler.graphqlHandler # required, handler set in AWS Lambda
+  graphql:
+    handler: handler.graphqlHandler
     name: ${self:provider.stage}-graphql # optional, Deployed Lambda name
     description: Description of what the lambda function does # optional, Description to publish to AWS
     events:
-5     - http:
-        path: graphql
-7       method: post
-8       cors: true
+    - http:
+        path: "graphql"
+        method: post
+        cors: true
