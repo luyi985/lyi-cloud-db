@@ -1,9 +1,18 @@
-module.exports.graphqlHandler = (event, context, callback) => {
-    const response = {
-        statusCode: 200,
-        body: JSON.stringify({
-          message: `Hello, the current time is ${new Date().toTimeString()}.`,
-        }),
-      };
-    callback(null, response);
-}
+const { ApolloServer } = require('apollo-server-lambda');
+const  { makeExecutableSchema } = require('graphql-tools');
+const typeDefs = require('./schema');
+const resolvers = require('./resolvers');
+
+const executableSchema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+});
+
+const server = new ApolloServer({ schema: executableSchema });
+
+exports.graphqlHandler = server.createHandler({
+  cors: {
+    origin: '*',
+    credentials: true,
+  },
+});
