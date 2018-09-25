@@ -19,7 +19,8 @@
   "homepage": "https://github.com/luyi985/lyi-cloud-db#readme",
   "dependencies": {
     "apollo-server-lambda": "^2.1.0",
-    "aws-sdk": "^2.319.0"
+    "aws-sdk": "^2.319.0",
+    "graphql": "^14.0.2"
   },
   "devDependencies": {
     "jest": "^23.6.0"
