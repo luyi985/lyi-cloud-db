@@ -1,5 +1,5 @@
 const { ApolloServer } = require('apollo-server-lambda');
-const  { makeExecutableSchema } = require('graphql-tools');
+const  { makeExecutableSchema } = ApolloServer;
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 
@@ -8,7 +8,7 @@ const executableSchema = makeExecutableSchema({
   resolvers,
 });
 
-const server = new ApolloServer({ schema: executableSchema });
+const server = new ApolloServer({ schema: executableSchema, logger: e => console.log(e) });
 
 exports.graphqlHandler = server.createHandler({
   cors: {
