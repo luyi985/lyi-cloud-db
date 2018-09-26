@@ -10,9 +10,13 @@ const executableSchema = makeExecutableSchema({
 
 const server = new ApolloServer({ schema: executableSchema, logger: e => console.log(e) });
 
-exports.graphqlHandler = server.createHandler({
+const graphqlHandler = server.createHandler({
   cors: {
     origin: '*',
     credentials: true,
   },
 });
+
+module.exports = {
+  graphqlHandler
+}
