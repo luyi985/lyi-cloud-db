@@ -18,6 +18,13 @@ provider:
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:ap-south-2:*:*"
 functions:
+  test:
+    handler: handler.test
+    events:
+    - http:
+        path: "test"
+        method: any
+        cors: true
   graphql:
     handler: handler.graphqlHandler
     name: ${self:provider.stage}-graphql # optional, Deployed Lambda name
