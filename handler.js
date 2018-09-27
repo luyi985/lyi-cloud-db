@@ -1,14 +1,19 @@
 const { ApolloServer } = require('apollo-server-lambda');
-const  { makeExecutableSchema } = ApolloServer;
+//const  { makeExecutableSchema } = ApolloServer;
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 
-const executableSchema = makeExecutableSchema({
+// const executableSchema = makeExecutableSchema({
+//   typeDefs,
+//   resolvers,
+// });
+
+//const server = new ApolloServer({ schema: executableSchema, logger: e => console.log(e) });
+const server = new ApolloServer({ 
   typeDefs,
   resolvers,
+  logger: e => console.log(e)
 });
-
-const server = new ApolloServer({ schema: executableSchema, logger: e => console.log(e) });
 
 const graphqlHandler = server.createHandler({
   cors: {
