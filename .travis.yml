@@ -6,12 +6,12 @@ notifications:
     rooms:
       - bull-and-cat:byDRDQP20Rm69PyAvWADvKL6
     template:
-      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} in PR <%{pull_request_url}|#%{pull_request_number}> by %{author} %{result} in %{duration}. %{message}"
+      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} in PR <%{pull_request_url}|#%{pull_request_number}> by %{author} %{result} in %{duration}. COMMIT MESSAGE: %{commit_message}"
 
 branches:
   only:
   - master
-  - /^(feature|fix)-.*$/
+  - /^(feature|fix)(\/|-)[A-Za-z0-9-.]+$/
 
 node_js:
   - "8.11.4"
