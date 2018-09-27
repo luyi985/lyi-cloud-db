@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/luyi985/lyi-cloud-db/issues"
   },
-  "homepage": "https://github.com/luyi985/lyi-cloud-db#readme"
+  "homepage": "https://github.com/luyi985/lyi-cloud-db#readme",
+  "dependencies": {
+    "apollo-server-lambda": "^2.0.0-xrc.11",
+    "aws-sdk": "^2.319.0",
+    "graphql": "^14.0.2"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }
